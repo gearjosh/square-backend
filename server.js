@@ -1,5 +1,10 @@
+require("dotenv").config();
 const express = require("express");
+const bodyParser = require("body-parser");
+const MongoClient = require("mongodb").MongoClient;
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(3000, function () {
   console.log("listening on 3000");
@@ -7,6 +12,19 @@ app.listen(3000, function () {
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
-  // Note: __dirname is the current directory you're in. Try logging it and see what you get!
-  // Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
 });
+
+app.post("/squares", (req, res) => {
+  console.log(req.body);
+});
+
+MongoClient.connect(
+  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.eu7jt.mongodb.net/squares?retryWrites=true&w=majority`,
+  {
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) return console.error(err);
+    console.log("Connected to Database");
+  }
+);
