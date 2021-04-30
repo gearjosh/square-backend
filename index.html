@@ -5,48 +5,49 @@
   <title>square-a-day backend</title>
 </head>
 <body>
-  <h1> Drinkamugamilkameal for the new Willenium </h1>
+  <h1> It's Drinkamugamilkameal for the new Willenium!!! 🇱🇷🗽☭ </h1>
 
   <form action="/squares" method="POST">
     <input type="text" placeholder="title" name="title">
 
     <br>
+    <hr>
 
     <input type="text" placeholder="alt" name="alt">
 
     <br>
+    <hr>
 
     <input type="text" placeholder="size" name="size">
 
     <br>
+    <hr>
 
     <input type="text" placeholder="hoverText" name="hoverText">
 
     <br>
+    <hr>
     
-    <textarea type="area" placeholder="anonymous onClick function" name="onClick" rows="5" cols="33"></textarea>
+    <input type="text" placeholder="image link" name="img">
 
     <br>
-    
-    <input type="text" placeholder="imgur link" name="img">
+    <hr>
 
-    <br>
-
-    <label for="available">available?</label>
     <select name="available">
-      <option value="true" selected>yes</option>
-      <option value="false">no</option>
+      <option value="true" selected>available</option>
+      <option value="false">unavailable</option>
     </select>
 
     <br>
+    <hr>
 
-    <label for="guestArtist">guestArtist?</label>
     <select name="guestArtist">
-      <option value="false" selected>no</option>
-      <option value="true">yes</option>
+      <option value="false" selected>drawn by me</option>
+      <option value="true">guest artist</option>
     </select>
 
     <br>
+    <hr>
 
     <button type="submit">Submit</button>
   </form>
