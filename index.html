@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>square-a-day backend</title>
+</head>
+<body>
+  <h1> Drinkamugamilkameal for the new Willenium </h1>
+
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="title" name="title">
+
+    <input type="text" placeholder="alt" name="alt">
+
+    <input type="text" placeholder="size" name="size">
+
+    <input type="text" placeholder="hoverText" name="hoverText">
+    
+    <textarea type="area" placeholder="anonymous onClick function" name="onClick" rows="5" cols="33"></textarea>
+
+    <label for="available">available?</label>
+    <select name="available">
+      <option value="true" selected>yes</option>
+      <option value="false">no</option>
+    </select>
+
+    <label for="guestArtist">guestArtist?</label>
+    <select name="guestArtist">
+      <option value="false" selected>no</option>
+      <option value="true">yes</option>
+    </select>
+
+    <input type="file" placeholder="img" name="img">
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
