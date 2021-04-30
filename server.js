@@ -10,7 +10,8 @@ MongoClient.connect(
 ).then((client) => {
   console.log("Connected to Database");
 
-  const db = client.db("squares");
+  const db = client.db("squaresDB");
+  const squaresCollection = db.collection("squares");
 
   app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,7 +20,13 @@ MongoClient.connect(
   });
   
   app.post("/squares", (req, res) => {
-    console.log(req.body);
+    squaresCollection
+      .insertOne(req.body)
+      .then((result) => {
+        console.log(result);
+        res.redirect("/");
+      })
+      .catch((error) => console.error(error));
   });
   
   app.listen(3000, function () {

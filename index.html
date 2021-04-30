@@ -10,13 +10,27 @@
   <form action="/squares" method="POST">
     <input type="text" placeholder="title" name="title">
 
+    <br>
+
     <input type="text" placeholder="alt" name="alt">
+
+    <br>
 
     <input type="text" placeholder="size" name="size">
 
+    <br>
+
     <input type="text" placeholder="hoverText" name="hoverText">
+
+    <br>
     
     <textarea type="area" placeholder="anonymous onClick function" name="onClick" rows="5" cols="33"></textarea>
+
+    <br>
+    
+    <input type="text" placeholder="imgur link" name="img">
+
+    <br>
 
     <label for="available">available?</label>
     <select name="available">
@@ -24,13 +38,15 @@
       <option value="false">no</option>
     </select>
 
+    <br>
+
     <label for="guestArtist">guestArtist?</label>
     <select name="guestArtist">
       <option value="false" selected>no</option>
       <option value="true">yes</option>
     </select>
 
-    <input type="file" placeholder="img" name="img">
+    <br>
 
     <button type="submit">Submit</button>
   </form>
